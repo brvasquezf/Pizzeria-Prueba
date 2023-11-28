@@ -8,19 +8,14 @@ const PizzaProvider = ({children}) => {
     const [detailsCart, setDetailsCart] = useState([])
 
     useEffect(() => {
-        const getPizza = async () => {
-            try{
-                const results = await fetch(`/pizza.json`);
-                const data = await results.json();
-                setPizzaData(data);
-            }catch (error){
-                console.error("Error Fetching Pizza Data:", error)
-
-            }
-        }
-        getPizza();
-
-    }, []);
+      getPizzas()
+    }, [])
+  
+    const getPizzas = async () => {
+      const res = await fetch('../pizzas.json')
+      const pizzas = await res.json()
+      setPizzas(pizzas)
+    }
 
     const addPizza = ({ id, price, name, img }) => {
         const product = { id, price, name, img, count: 1 }

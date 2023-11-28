@@ -16,11 +16,9 @@ function App() {
       <BrowserRouter>
         <PizzaProvider>
           <Navigator />
-          <h1>Hola mundo</h1>
-
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/pizza/:id' element={<PizzasDetails />} />
+            <Route path='/PizzasDetails/:id' element={<PizzasDetails />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='*' element={<NotFound />} />
           </Routes>

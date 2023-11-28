@@ -1,5 +1,5 @@
 import { Container } from 'react-bootstrap'
-import Cards from '../components/Card'
+import Card from '../components/Card'
 
 const Home = ({}) => {
 
@@ -11,7 +11,7 @@ const Home = ({}) => {
         <hr style={{ border: '1px solid white', width: '70%' }} />
       </header>
       <Container>
-        <Cards />
+        <Card />
       </Container>
     </>
   )

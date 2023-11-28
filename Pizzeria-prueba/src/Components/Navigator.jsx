@@ -1,27 +1,25 @@
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Pizza from '../Img/pizza.png'
-
+import { NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import PizzaContext from '../Context/PizzaContext'
+import { Navbar, Nav } from 'react-bootstrap'
 const Navigator = () => {
-    return (
-        <div>
+    const getNavLinkClass = ({ isActive }) => (isActive ? 'active' : 'undefined')
 
-            <Navbar className="bg-body-tertiary" expand='lg'>
-                <Container>
-                    <Navbar.Brand href="#home">
-                        <img
-                            alt=""
-                            src={Pizza}
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
-                        />{' '}
-                        <h2>Pizzeria Mamma Mia!</h2>
-                    </Navbar.Brand>
-                </Container>
-            </Navbar>
+  const { total } = useContext(PizzaContext)
 
-        </div>
+  return (
+    <Navbar className='d-flex justify-content-between'>
+      <Nav.Item className='mx-5'>
+        <NavLink className={getNavLinkClass} to='/'>
+          🍕 Home
+        </NavLink>
+      </Nav.Item>
+      <Nav.Item className='mx-5'>
+        <NavLink className={getNavLinkClass} to='/cart'>
+          🛒 Cart: $ {(total.toLocaleString('es-CL'))}
+        </NavLink>
+      </Nav.Item>
+    </Navbar>
     )
 }
 
