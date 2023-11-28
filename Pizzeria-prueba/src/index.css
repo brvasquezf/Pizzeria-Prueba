@@ -1,19 +1,21 @@
 .header {
-    background-image: url(https://images7.alphacoders.com/858/858236.jpg);
+    background-image: url(https://media.revistagq.com/photos/5d8b3cd2261a8f0008786844/16:9/w_1600,c_limit/como%20hacer%20la%20mejor%20pizza%20del%20mundo.jpg);
     background-size: cover;
     height: 200px;
   }
   
   Nav {
-    background-color: #18a2b8;
+    background-color: #b81818;
   }
-  
-  a {
+
+  .navbar a{
     color: white;
     font-size: 1.5rem;
     text-decoration: none;
   }
-  a:hover {
+  
+
+  .navbar a:hover {
     color: rgb(207, 207, 207);
   }
   

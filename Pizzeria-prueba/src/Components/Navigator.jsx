@@ -8,7 +8,7 @@ const Navigator = () => {
   const { total } = useContext(PizzaContext)
 
   return (
-    <Navbar className='d-flex justify-content-between'>
+    <Navbar className='d-flex justify-content-between navbar'>
       <Nav.Item className='mx-5'>
         <NavLink className={getNavLinkClass} to='/'>
           🍕 Home
